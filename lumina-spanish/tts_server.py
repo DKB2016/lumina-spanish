@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
-VOICE = Path(os.environ.get("LUMINA_PIPER_MODEL", str(ROOT / "voices" / "es_MX.onnx"))).resolve()
+VOICE = Path(os.environ.get("LUMINA_PIPER_MODEL", str(ROOT / "voices" / "es_MX-claude-high.onnx"))).resolve()
 PIPER = os.environ.get("LUMINA_PIPER_BIN", "piper")
 CACHE = ROOT / ".audio-cache"
 HOST = os.environ.get("LUMINA_TTS_HOST", "127.0.0.1")
