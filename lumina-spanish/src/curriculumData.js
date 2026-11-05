@@ -1,5 +1,6 @@
+import {expandedA1Units} from './expandedA1Units';
 /** A1 pilot curriculum: 2 units, 8 full multi-skill lessons. */
-export const curriculum=[
+export const pilotUnits=[
   {
     "id": "a1-u1",
     "title": "First Conversations",
@@ -473,3 +474,5 @@ export const curriculum=[
     ]
   }
 ];
+
+export const curriculum=[...pilotUnits,...expandedA1Units];
