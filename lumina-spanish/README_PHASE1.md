@@ -69,3 +69,23 @@ Do not merge until `npm run build` and manual audio checks pass.
 6. Reload the app and confirm counts and confidence history persist.
 7. Confirm completed story vocabulary review also updates shared word knowledge.
 8. Run `npm run build` before merging.
+
+## Topic folders and expanded decks
+
+- The flashcard library now contains **11 topic folders**, each with **2 decks**, for **22 decks total**.
+- Each deck contains **at least 25 cards** (550 card entries across the library). Original deck IDs are retained and padded with relevant vocabulary; 11 new 25-card decks have been added.
+- Folder view shows **completed decks / total decks** and a progress bar.
+- Inside each folder, deck cards show completion state, last session's high-confidence percentage, and number of words practiced.
+- A deck is marked completed after its session reaches the final card, regardless of confidence; this is deliberately separate from word mastery. Completion is saved in `deckCompletions` in browser localStorage.
+- Confidence-based scheduling continues to prioritize weak vocabulary; a repeat session may contain fewer than 25 due cards even though the deck's catalog contains 25+.
+- Existing user progress remains in place. Previously completed deck sessions from before this feature are not backfilled as folder completions.
+
+### Folder acceptance checks
+
+1. Confirm 11 folders and two decks per folder, with at least 25 catalog cards each.
+2. Finish one deck and return to the folder: verify **1 / 2 completed** and 50% progress.
+3. Finish the other deck: verify **2 / 2 completed** and 100% progress.
+4. Reload and verify completion remains; revisit a deck without resetting folder completion.
+5. Verify a previously studied word retains confidence and mastery state.
+6. Verify TTS matches the visible shuffled flashcard.
+7. Run `npm run build` before merging.
