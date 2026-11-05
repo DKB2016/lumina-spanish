@@ -1,6 +1,7 @@
 import {wordKey} from './vocabularyProgress';
 
 /** Prioritize weak and overdue vocabulary across story lessons and every topic deck. */
+const DAY=86400000;
 export function reviewQueue(progress,lessons,decks,mode='daily',now=Date.now()){
   const words=new Map();
   for(const lesson of lessons)if(progress.completed?.includes(lesson.id)){
@@ -22,6 +23,6 @@ export function reviewQueue(progress,lessons,decks,mode='daily',now=Date.now()){
     const priority=(overdue?50:0)+(weak?25:0)+(mastered?-30:0)+Math.min(20,Math.max(0,daysSince));
     return {...word,priority,overdue,weak,mastered,lastReviewed:state?.lastReviewed||0};
   });
-  const eligible=scored.filter(w=>mode==='weekly'?(w.overdue||w.weak||w.mastered):w.overdue&&!w.mastered);
+  const eligible=scored.filter(w=>mode==='weekly'?(w.overdue||(w.weak&&now-w.lastReviewed>=DAY)||(w.mastered&&now-w.lastReviewed>=7*DAY)):w.overdue&&!w.mastered);
   return eligible.sort((a,b)=>b.priority-a.priority||a.es.localeCompare(b.es,'es')).slice(0,mode==='weekly'?40:20);
 }
