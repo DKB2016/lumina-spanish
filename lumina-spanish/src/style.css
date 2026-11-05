@@ -23,3 +23,14 @@
 .visualflashcard>span{font-size:12px;color:#b2afc6}
 .deckcontrols{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
 @media(max-width:550px){.deckgrid{grid-template-columns:1fr 1fr;gap:9px}.decktile{padding:14px}.deckpreview{font-size:25px}.storyscene svg{height:140px}.storyscene .sceneicon{font-size:65px}}
+
+
+.deckresults{padding:30px 20px;background:#202233;border:1px solid #403a58;border-radius:20px}
+.deckresults h2{font-size:25px;margin:8px 0 14px}
+.deckscore{display:block;font-size:clamp(55px,9vw,84px);font-weight:850;color:#c5adff;line-height:1.2}
+.deckresults>p{color:#c4bfd6;font-size:14px}
+.deckresultstats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:22px 0}
+.deckresultstats span{padding:10px 15px;background:#302c44;border-radius:12px;font-size:13px}
+.deckmissed{margin:16px auto 24px;max-width:440px;padding:16px;border-radius:14px;background:#332d3d;text-align:left}
+.deckmissed h3{font-size:14px;margin:0 0 8px}.deckmissed p{color:#d5cde0;line-height:1.8;margin:0;font-size:13px}
+.deckresults .reviewnote{display:block;margin-top:22px}
