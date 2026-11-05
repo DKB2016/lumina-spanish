@@ -29,3 +29,24 @@ All lesson data is stored in `src/curriculumData.js`, and the reusable activity 
 7. Allow microphone permission, record, stop, and play back audio; test denial handling.
 8. Complete a lesson, reload, and confirm its completion status persists.
 9. Check phone-sized layout and regression-test existing Learn, Review, Decks, and Assessments tabs.
+
+## Adaptive practice, scoring, and content expansion
+
+- Expanded to **4 units / 16 lessons**, covering introductions, family, preferences, routines, food, shopping, prices, restaurants, time, directions, buses, and weather. This is still not a complete A1 syllabus.
+- Every lesson now has **nine stages**, including an additional bank of **three objective practice questions**. There are 24 manually authored additional questions for the original eight lessons; the eight new lessons generate three phrase-meaning questions each from their lesson vocabulary.
+- Objective score: **six first-attempt items** per lesson (listening, sentence construction, reading, three extra practice items). **80% required** to pass (at least five correct of six).
+- On an incorrect answer, the learner gets an explanation and must correct the item before advancing. A corrected retry does **not** retroactively improve the first-attempt grade. Learners may repeat the lesson to earn a better score.
+- Finishing shows a results page with score, number correct, pass/needs-practice status, and missed activity categories. Unit progress counts passed lessons, not merely visited lessons.
+- Dialogue and writing require nonempty responses before advancing, but their **quality is not automatically evaluated**. Speaking is ungraded and can be skipped if no microphone is available. The displayed percentage is **objective exercise performance only**, not an overall four-skill proficiency grade.
+- Existing progress records from earlier pilot versions remain available but may have no grade; they display as **Not graded yet** until retaken.
+
+### Additional acceptance checks
+
+1. Complete a lesson with all six first-attempt answers correct: verify **100%**, pass, and unit progress increment.
+2. Make two first-attempt errors, correct both, finish: verify **67%**, needs practice, and no unit pass credit.
+3. Retry and improve to five correct: verify **83%** and pass.
+4. Confirm an unanswered or uncorrected question blocks Continue.
+5. Confirm empty conversation/writing inputs block Continue.
+6. Reload and verify saved score, pass status, and written responses persist.
+7. Open new units and verify each has four lessons with a working three-question extra practice stage.
+8. Run `npm run build` and browser smoke tests before merging.
