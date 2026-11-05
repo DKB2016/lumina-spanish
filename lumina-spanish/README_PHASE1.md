@@ -89,3 +89,24 @@ Do not merge until `npm run build` and manual audio checks pass.
 5. Verify a previously studied word retains confidence and mastery state.
 6. Verify TTS matches the visible shuffled flashcard.
 7. Run `npm run build` before merging.
+
+## Adaptive review and CEFR assessment foundations
+
+- The Review tab now offers **Daily** (up to 20 cards) and **Weekly** (up to 40 cards) queues.
+- Both queues draw from completed-story vocabulary and previously studied cards across **all** folders. A normalized Spanish word is counted only once.
+- Due and low-confidence cards are prioritized; weekly review also revisits older mastered words for retention checks. All review responses update the same confidence/mastery history used by topical decks.
+- A **Level assessments** navigation tab shows A1, A2, B1, B2, C1 readiness milestones and sample listening, reading, writing and speaking tasks.
+- Readiness thresholds are **product heuristics**, not official CEFR vocabulary requirements. They should be validated and adjusted with authentic learner performance.
+- **No level certification or proficiency pass/fail is awarded.** The A1 listening/reading sample uses simple multiple-choice prompts, writing is entered as text, and speaking is an ungraded spoken prompt with a note field. The other levels currently contain task blueprints only. This is an interface and content foundation, **not** a full exam engine or an objectively validated proficiency test.
+- A future real assessment requires a calibrated item bank, robust audio comprehension, speech capture/analysis or human assessment, writing rubrics, multi-task sampling, and standard-setting against CEFR descriptors. It should still be labeled an unofficial CEFR-aligned assessment unless independently accredited.
+
+### Additional test checklist
+
+1. Study a topical card, then verify it appears in the shared Review queue when due.
+2. Rate a review card **Didn't know** and verify it returns on a later eligible session, not immediately in an endless loop.
+3. Compare daily and weekly review queues; verify weekly includes older retained vocabulary.
+4. Verify a Spanish word shared across multiple decks is not duplicated in the queue.
+5. Open the Level assessments tab, expand A1, and test the sample listening audio and writing input.
+6. Confirm no level is incorrectly marked as passed or certified.
+7. Verify existing local progress is preserved after upgrade.
+8. Run `npm run build` and test both narrow and desktop layouts before merging.
