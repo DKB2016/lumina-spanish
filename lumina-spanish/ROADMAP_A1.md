@@ -1,6 +1,6 @@
 # Lumina A1 delivery roadmap and burndown
 
-**Baseline:** 2026-11-04. **Scope:** 14 GitHub issues, **142 estimated story points**. All issues initially open. Estimates are planning approximations, not commitments. PR #3 remains draft and is **not** considered done.
+**Baseline:** 2026-11-04. **Scope:** 15 GitHub issues, **147 estimated story points**. All issues initially open. Estimates are planning approximations, not commitments. PR #3 remains draft and is **not** considered done.
 
 ## Burndown baseline
 
@@ -8,8 +8,8 @@
 xychart-beta
   title "A1 roadmap: remaining story points"
   x-axis ["Baseline", "Current"]
-  y-axis "Remaining points" 0 --> 142
-  line [142, 142]
+  y-axis "Remaining points" 0 --> 147
+  line [147, 147]
 ```
 
 This chart records the *actual initial baseline only*. We will append a dated snapshot after each validated issue closure. We must not invent future velocity or mark a task done simply because code was pushed.
@@ -34,7 +34,12 @@ This chart records the *actual initial baseline only*. We will append a dated sn
 | P2 | #15 | Privacy, accessibility, offline assessment | 8 |
 | P2 | #16 | Curriculum schema and CI validation | 5 |
 | P2 | #17 | Pilot testing and release gates | 8 |
-| | | **Total** | **142** |
+| P1 | #18 | Unit grades, skill breakdowns and retake recommendations | 5 |
+| | | **Total** | **147** |
+
+## Unit-level grading design
+
+Unit score is computed from first-attempt objective results in graded lessons only. Unattempted lessons do not count as zero, and the UI displays coverage separately. Each unit displays lesson scores, listening/reading/sentence-building/usage skill breakdowns and weakest lessons to retake. The overall A1 grade is currently the average of graded lesson scores; future work will reconcile weighting and track best/latest attempts. Writing and speaking are excluded until validated grading exists. See [issue #18](https://github.com/DKB2016/lumina-spanish/issues/18).
 
 ## Speaking assessment architecture
 
