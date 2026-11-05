@@ -47,3 +47,25 @@ This is **Phase 1**, not the full 5,000-word corpus. Decks are curated A1 sample
 - `src/style.css`: responsive layouts for new components.
 
 Do not merge until `npm run build` and manual audio checks pass.
+
+## Vocabulary mastery upgrade (review confidence)
+
+- Topical flashcards now have four responses: **Didn't know**, **Guessed**, **Barely knew**, **Knew it well**.
+- The same Spanish word is tracked across topical decks and lesson vocabulary review using its normalized Spanish spelling.
+- The Home, Progress, and top navigation show a conservative **mastered words** count.
+- A word becomes mastered after at least **three consecutive high-confidence reviews across at least two calendar days**. A lower-confidence response resets its streak.
+- High-confidence words get increasingly long review intervals (7, 13, 23, 41, 73, then 90 days); low-confidence words are prioritized for earlier review (immediately, 1 day, or 3 days).
+- Previously mastered words are omitted from routine deck sessions until due. When every word is mastered and not due, opening the deck still allows voluntary full practice.
+- Deck completion still summarizes the current session and offers a targeted **Review weaker words** action.
+- This is a lightweight confidence scheduler, not yet a complete FSRS implementation. Existing historical binary deck ratings are preserved, but not automatically promoted to mastery without fresh confidence evidence.
+
+### Additional acceptance checks
+
+1. Complete a deck with mixed confidence ratings; verify results and weaker-word review.
+2. Review the same word from two different decks; verify one shared mastery count, not duplicates.
+3. Mark a word **Knew it well** three times on one day: it must **not** be mastered yet.
+4. Repeat a high-confidence review on another day; verify mastery can increase.
+5. Rate a mastered word **Didn't know** when it is next due; verify it is demoted.
+6. Reload the app and confirm counts and confidence history persist.
+7. Confirm completed story vocabulary review also updates shared word knowledge.
+8. Run `npm run build` before merging.
