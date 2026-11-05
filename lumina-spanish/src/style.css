@@ -102,3 +102,16 @@
 
 /* Objective lesson scoring and remediation */
 .resultgrade{font:800 64px Outfit,sans-serif;color:#c4adff;line-height:1.1}.curriculumactivity .activityfeedback{font-weight:700}.curriculumactivity .curriculumoptions button:disabled{opacity:.55;cursor:default}
+
+
+/* Unit, skill and curriculum grade dashboards */
+.unitgradehero{background:#29263d;border:1px solid #504469;border-radius:18px;padding:24px;margin:20px 0 28px;display:grid;gap:7px}
+.unitgradehero strong{font:800 31px Outfit,sans-serif;color:#dac8ff}
+.unitgradehero span{font-size:13px;color:#c4bed4;line-height:1.5}
+.unitgradevalue{font:800 30px Outfit,sans-serif;color:#dac8ff}
+.unitskills{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:16px 0 25px}
+.unitskill{display:grid;gap:9px;padding:17px;border:1px solid #464058;border-radius:13px;background:#242438}
+.unitskill>span{font-size:13px;color:#d7d0e5;font-weight:700}
+.unitskill>strong{font:800 26px Outfit,sans-serif;color:#dfcfff}
+.unitskill>small{font-size:11px;color:#b3aac9}
+.unitlessongrade{font-size:18px;color:#d8c5ff}
