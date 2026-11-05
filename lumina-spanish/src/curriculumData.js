@@ -40,7 +40,7 @@ export const pilotUnits=[
         "sentence": {
           "target": "Hola, me llamo Ana.",
           "tokens": [
-            "Hola",
+            "Hola,",
             "me llamo",
             "Ana."
           ]
