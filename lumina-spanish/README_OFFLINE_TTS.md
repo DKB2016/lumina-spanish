@@ -5,8 +5,8 @@ Lumina now uses a **local Piper speech engine** instead of robotic browser TTS. 
 ## One-time installation (internet required to download software and voice)
 
 1. Download a Windows Piper executable from the official [rhasspy/piper releases](https://github.com/rhasspy/piper/releases) or install a compatible Piper CLI. Extract it to a folder such as `C:\\Tools\\piper`.
-2. Download an **es_MX** voice from the [Piper voice catalog](https://github.com/rhasspy/piper/blob/master/VOICES.md). Listen to voice samples first; quality varies by model. Download **both** the matching `.onnx` model and `.onnx.json` configuration. Not every available Mexican Spanish model sounds equally natural.
-3. Put both files under `lumina-spanish/voices/` and rename the pair to `es_MX.onnx` and `es_MX.onnx.json` respectively. Or set `LUMINA_PIPER_MODEL` to the full path of the original `.onnx` model (its adjacent JSON must have the same base name).
+2. Download the preferred **es_MX-claude-high** voice from the [Piper voice catalog](https://github.com/rhasspy/piper/blob/master/VOICES.md). Listen to voice samples first; quality varies by model. Download **both** the matching `.onnx` model and `.onnx.json` configuration. Not every available Mexican Spanish model sounds equally natural.
+3. Put both files under `lumina-spanish/voices/` and rename the pair to `es_MX-claude-high.onnx` and `es_MX-claude-high.onnx.json` respectively. Or set `LUMINA_PIPER_MODEL` to the full path of the original `.onnx` model (its adjacent JSON must have the same base name).
 4. In **PowerShell terminal 1** (inside the inner `lumina-spanish` folder):
 
    ```powershell
