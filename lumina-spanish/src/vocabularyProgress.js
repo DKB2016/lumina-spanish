@@ -13,7 +13,7 @@ export function recordRecall(previous={},rating,now=Date.now()){
 export function summarizeWords(progress,lessons,decks){
   const entries=new Map();
   for(const l of lessons)if(progress.completed?.includes(l.id))for(const [es] of l.vocab)entries.set(wordKey(es),es);
-  for(const d of decks)for(const w of d.words)entries.set(wordKey(w.es),w.es);
+  // Deck catalog availability is not evidence that the learner has encountered a word.
   const knowledge=progress.wordKnowledge||{};
   const encountered=new Set([...entries.keys(),...Object.keys(knowledge)]);
   const studied=Object.values(knowledge).filter(v=>(v?.attempts||0)>0).length;
@@ -29,5 +29,6 @@ export function sortDeckWords(words,knowledge,now=Date.now()){
     if((v.next||0)<=now)return 5+Math.min(3,(now-(v.next||0))/86400000);
     return 1;
   };
-  return [...words].sort((a,b)=>urgency(b)-urgency(a));
+  const eligible=words.filter(w=>{const v=knowledge?.[wordKey(w.es)];return !v?.mastered||(v.next||0)<=now});
+  return eligible.sort((a,b)=>urgency(b)-urgency(a));
 }
