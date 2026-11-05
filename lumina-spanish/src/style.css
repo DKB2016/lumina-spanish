@@ -56,3 +56,31 @@
 .foldercontents>.deckprogress{max-width:480px;margin:16px 0 24px}
 .foldercontents .deckgrid{margin-top:20px}
 .foldercontents .decktile small{line-height:1.5}
+
+
+/* Daily/weekly review and CEFR practice */
+.reviewmodes{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}
+.reviewmodes button,.assessmentoptions button{border:1px solid #48435c;background:#29273b;color:#d9d1ea;border-radius:11px;padding:12px 16px;font-weight:700}
+.reviewmodes button.selected,.assessmentoptions button.selected{background:#45365d;border-color:#bba3ff;color:#fff}
+.flashactions{flex-wrap:wrap}
+.flashactions .confidence{border:0;padding:12px 14px;border-radius:10px;font-size:12px;font-weight:800}
+.flashactions .confidence.guess{background:#53404d;color:#f6c2c5}
+.flashactions .confidence.hard{background:#51472f;color:#ffe2a0}
+.levelgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:24px 0}
+.leveltile{border:1px solid #39394c;background:#202233;border-radius:18px;padding:22px}
+.levelheader{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.levelheader strong{font-size:29px;color:#c5adff}
+.levelheader span{font-size:11px;color:#aaa5be}
+.leveltile>p{color:#c6c0d7;line-height:1.6;font-size:13px;min-height:54px}
+.leveltile>small{color:#b5abc9}
+.leveltile .deckprogress{margin:14px 0}
+.assessmenttasks{margin-top:20px;border-top:1px solid #403d52;padding-top:10px}
+.assessmenttask{margin:14px 0;padding:14px;background:#2b2b40;border-radius:12px}
+.assessmenttask b{color:#e4d9ff}
+.assessmenttask p{font-size:12px;line-height:1.7;color:#c9c5d5}
+.assessmenttask blockquote{font-size:13px;line-height:1.7;margin:12px 0;color:#eee}
+.assessmenttask textarea{width:100%;background:#191b2b;color:#f7f4ff;border:1px solid #504a65;border-radius:9px;padding:10px;resize:vertical;font:inherit;font-size:13px}
+.assessmentoptions{display:grid;gap:7px}
+.assessmentoptions button{text-align:left;font-size:12px}
+.assessmentdisclaimer{display:flex;gap:10px;align-items:flex-start;color:#b6adc7;font-size:12px;line-height:1.7}
+@media(max-width:550px){.levelgrid{grid-template-columns:1fr}.flashactions .confidence{flex:1 1 40%}}
