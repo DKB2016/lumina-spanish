@@ -1,4 +1,4 @@
-import {expandedA1Units} from './expandedA1Units';
+import {expandedA1Units} from './expandedA1Units.js';
 /** A1 pilot curriculum: 2 units, 8 full multi-skill lessons. */
 export const pilotUnits=[
   {
