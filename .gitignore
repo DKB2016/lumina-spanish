@@ -6,3 +6,8 @@
 **/.env.*
 !**/.env.example
 .DS_Store
+
+# Offline TTS models and generated audio
+**/voices/
+**/.audio-cache/
+**/__pycache__/
