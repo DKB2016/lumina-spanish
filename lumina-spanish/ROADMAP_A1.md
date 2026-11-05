@@ -1,6 +1,6 @@
 # Lumina A1 delivery roadmap and burndown
 
-**Baseline:** 2026-11-04. **Scope:** 15 GitHub issues, **147 estimated story points**. All issues initially open. Estimates are planning approximations, not commitments. PR #3 remains draft and is **not** considered done.
+**Baseline:** 2026-11-04. **Scope:** 18 GitHub issues, **181 estimated story points**. All issues initially open. Estimates are planning approximations, not commitments. PR #3 remains draft and is **not** considered done.
 
 ## Burndown baseline
 
@@ -8,8 +8,8 @@
 xychart-beta
   title "A1 roadmap: remaining story points"
   x-axis ["Baseline", "Current"]
-  y-axis "Remaining points" 0 --> 147
-  line [147, 147]
+  y-axis "Remaining points" 0 --> 181
+  line [181, 181]
 ```
 
 This chart records the *actual initial baseline only*. We will append a dated snapshot after each validated issue closure. We must not invent future velocity or mark a task done simply because code was pushed.
@@ -35,11 +35,18 @@ This chart records the *actual initial baseline only*. We will append a dated sn
 | P2 | #16 | Curriculum schema and CI validation | 5 |
 | P2 | #17 | Pilot testing and release gates | 8 |
 | P1 | #18 | Unit grades, skill breakdowns and retake recommendations | 5 |
-| | | **Total** | **147** |
+| P1 | #19 | Four original 15–20-minute A1 audio stories/podcasts | 13 |
+| P1 | #20 | Multi-voice playback, transcript synchronization, offline cache | 13 |
+| P1 | #21 | Podcast comprehension, vocabulary and skill analytics | 8 |
+| | | **Total** | **181** |
 
 ## Unit-level grading design
 
 Unit score is computed from first-attempt objective results in graded lessons only. Unattempted lessons do not count as zero, and the UI displays coverage separately. Each unit displays lesson scores, listening/reading/sentence-building/usage skill breakdowns and weakest lessons to retake. The overall A1 grade is currently the average of graded lesson scores; future work will reconcile weighting and track best/latest attempts. Writing and speaking are excluded until validated grading exists. See [issue #18](https://github.com/DKB2016/lumina-spanish/issues/18).
+
+## Stories and podcasts workstream
+
+Issues [#19](https://github.com/DKB2016/lumina-spanish/issues/19), [#20](https://github.com/DKB2016/lumina-spanish/issues/20), and [#21](https://github.com/DKB2016/lumina-spanish/issues/21) add long-form original comprehensible-input audio. Begin with four 15–20-minute A1 episodes. Scripts must be paced, scaffolded, and timed from actual rendered audio. Include optional synchronized transcripts, translations, sentence replay, offline cache, listening comprehension, vocabulary integration and skill analytics. Listening duration alone does not imply mastery. Multi-voice delivery requires suitable available voices or explicit narrated format.
 
 ## Speaking assessment architecture
 
