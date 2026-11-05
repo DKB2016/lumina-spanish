@@ -1,0 +1,22 @@
+name: Lumina A1 validation
+on:
+  push:
+    branches: [main, feature/interactive-a1-curriculum]
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lumina-spanish
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: lumina-spanish/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
