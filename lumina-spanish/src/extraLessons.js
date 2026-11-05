@@ -35,23 +35,23 @@ export const extraLessons=[
     "vocab": [
       [
         "saluda",
-        "Ana greets her friend Pedro."
+        "greets"
       ],
       [
-        "Pedro",
-        "Pedro says: Hello, how are you?"
+        "amigo",
+        "friend"
       ],
       [
-        "Estoy",
-        "Ana says: I am well, thank you."
+        "hola",
+        "hello"
       ],
       [
-        "sonríen",
-        "They both smile."
+        "gracias",
+        "thank you"
       ],
       [
-        "Después",
-        "Afterward they go to school."
+        "escuela",
+        "school"
       ]
     ],
     "questions": [
@@ -111,24 +111,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Julia",
-        "Julia gets up at seven."
+        "desayuno",
+        "breakfast"
       ],
       [
-        "Tiene",
-        "She is hungry and goes to the kitchen."
+        "hambre",
+        "hunger"
       ],
       [
-        "Prepara",
-        "She prepares eggs and bread."
+        "cocina",
+        "kitchen"
       ],
       [
-        "Bebe",
-        "She drinks a glass of water."
+        "huevos",
+        "eggs"
       ],
       [
-        "Después",
-        "Afterward she leaves home."
+        "pan",
+        "bread"
       ]
     ],
     "questions": [
@@ -188,24 +188,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Mateo",
-        "Mateo waits for the bus."
-      ],
-      [
         "autobús",
-        "The bus arrives at eight."
+        "bus"
       ],
       [
-        "Mateo",
-        "Mateo buys a ticket."
+        "espera",
+        "waits"
       ],
       [
-        "sienta",
-        "He sits next to the window."
+        "boleto",
+        "ticket"
       ],
       [
-        "centro",
-        "He goes downtown."
+        "ventana",
+        "window"
+      ],
+      [
+        "ciudad",
+        "city"
       ]
     ],
     "questions": [
@@ -265,24 +265,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Elena",
-        "Elena needs a new shirt."
-      ],
-      [
-        "Entra",
-        "She enters a small shop."
-      ],
-      [
         "camisa",
-        "She sees a blue shirt."
+        "shirt"
       ],
       [
-        "camisa",
-        "The shirt costs one hundred pesos."
+        "tienda",
+        "store"
       ],
       [
-        "Elena",
-        "Elena buys the shirt."
+        "azul",
+        "blue"
+      ],
+      [
+        "cuesta",
+        "costs"
+      ],
+      [
+        "compra",
+        "buys"
       ]
     ],
     "questions": [
@@ -342,24 +342,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Carlos",
-        "Carlos studies Spanish."
-      ],
-      [
         "biblioteca",
-        "He goes to the library in the afternoon."
+        "library"
       ],
       [
-        "Busca",
-        "He looks for an easy book."
+        "estudia",
+        "studies"
       ],
       [
-        "páginas",
-        "He reads ten pages."
+        "libro",
+        "book"
       ],
       [
-        "Aprende",
-        "He learns five new words."
+        "lee",
+        "reads"
+      ],
+      [
+        "palabras",
+        "words"
       ]
     ],
     "questions": [
@@ -419,24 +419,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "tiene",
-        "Rosa has a white cat."
+        "gato",
+        "cat"
+      ],
+      [
+        "blanco",
+        "white"
       ],
       [
         "duerme",
-        "The cat sleeps on the sofa."
-      ],
-      [
-        "mañana",
-        "In the morning he is hungry."
+        "sleeps"
       ],
       [
         "comida",
-        "Rosa gives him food and water."
+        "food"
       ],
       [
-        "contento",
-        "The cat is happy."
+        "agua",
+        "water"
       ]
     ],
     "questions": [
@@ -497,23 +497,23 @@ export const extraLessons=[
     "vocab": [
       [
         "cumpleaños",
-        "Today is Pablo's birthday."
+        "birthday"
       ],
       [
         "familia",
-        "His family prepares a party."
+        "family"
+      ],
+      [
+        "fiesta",
+        "party"
       ],
       [
         "pastel",
-        "There is a chocolate cake."
+        "cake"
       ],
       [
-        "Pablo",
-        "Pablo turns twenty."
-      ],
-      [
-        "Todos",
-        "Everyone sings and celebrates."
+        "años",
+        "years"
       ]
     ],
     "questions": [
@@ -573,24 +573,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Lucía",
-        "Lucía goes to the beach with her sister."
+        "playa",
+        "beach"
       ],
       [
-        "brilla",
-        "The sun shines and it is hot."
+        "hermana",
+        "sister"
       ],
       [
-        "Llevan",
-        "They bring water and fruit."
+        "sol",
+        "sun"
       ],
       [
-        "Nadan",
-        "They swim in the sea."
+        "mar",
+        "sea"
       ],
       [
-        "Regresan",
-        "They return home in the afternoon."
+        "nadan",
+        "swim"
       ]
     ],
     "questions": [
@@ -650,24 +650,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Andrés",
-        "Andrés has a headache."
+        "cabeza",
+        "head"
       ],
       [
         "médico",
-        "He goes to the doctor in the morning."
+        "doctor"
       ],
       [
-        "médico",
-        "The doctor asks him questions."
+        "preguntas",
+        "questions"
       ],
       [
-        "Andrés",
-        "Andrés needs to rest and drink water."
+        "descansar",
+        "rest"
       ],
       [
-        "Vuelve",
-        "He returns home and sleeps."
+        "duerme",
+        "sleeps"
       ]
     ],
     "questions": [
@@ -727,24 +727,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Mariana",
-        "Mariana enters a restaurant."
+        "restaurante",
+        "restaurant"
       ],
       [
-        "Quiere",
-        "She wants two chicken tacos."
+        "tacos",
+        "tacos"
+      ],
+      [
+        "pollo",
+        "chicken"
       ],
       [
         "mesero",
-        "The waiter brings the tacos."
+        "waiter"
       ],
       [
-        "Mariana",
-        "Mariana eats and drinks water."
-      ],
-      [
-        "Dice",
-        "She says: How delicious!"
+        "rico",
+        "delicious"
       ]
     ],
     "questions": [
@@ -804,24 +804,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Sergio",
-        "Sergio has a new job."
+        "trabajo",
+        "job"
       ],
       [
-        "Llega",
-        "He arrives at the office early."
+        "oficina",
+        "office"
       ],
       [
-        "Conoce",
-        "He meets his colleague Laura."
+        "compañera",
+        "colleague"
       ],
       [
-        "Laura",
-        "Laura shows him his desk."
+        "escritorio",
+        "desk"
       ],
       [
-        "Sergio",
-        "Sergio is a little nervous."
+        "nervioso",
+        "nervous"
       ]
     ],
     "questions": [
@@ -881,24 +881,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "viaja",
-        "Nora travels by train to another city."
+        "tren",
+        "train"
       ],
       [
-        "Tiene",
-        "She has a small backpack."
-      ],
-      [
-        "nueve",
-        "The train leaves at nine."
+        "mochila",
+        "backpack"
       ],
       [
         "montañas",
-        "Nora looks at the mountains."
+        "mountains"
       ],
       [
-        "Llega",
-        "She arrives before noon."
+        "sale",
+        "leaves"
+      ],
+      [
+        "llega",
+        "arrives"
       ]
     ],
     "questions": [
@@ -959,23 +959,23 @@ export const extraLessons=[
     "vocab": [
       [
         "abuela",
-        "My grandmother has a garden."
+        "grandmother"
       ],
       [
         "jardín",
-        "There are yellow flowers in the garden."
+        "garden"
       ],
       [
-        "mañana",
-        "Every morning she waters the plants."
+        "flores",
+        "flowers"
       ],
       [
-        "También",
-        "There is also a big tree."
+        "árbol",
+        "tree"
       ],
       [
-        "gusta",
-        "I like helping my grandmother."
+        "plantas",
+        "plants"
       ]
     ],
     "questions": [
@@ -1035,24 +1035,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Tomás",
-        "Tomás plays soccer on Sundays."
+        "fútbol",
+        "soccer"
       ],
       [
         "amigos",
-        "His friends arrive at the park."
+        "friends"
       ],
       [
-        "Forman",
-        "They form two teams."
+        "equipos",
+        "teams"
       ],
       [
-        "Tomás",
-        "Tomás scores a goal."
+        "gol",
+        "goal"
       ],
       [
-        "Todos",
-        "Everyone is very happy."
+        "felices",
+        "happy"
       ]
     ],
     "questions": [
@@ -1112,24 +1112,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Marta",
-        "Marta writes a list."
+        "lista",
+        "list"
       ],
       [
-        "Necesita",
-        "She needs rice, milk, and eggs."
+        "arroz",
+        "rice"
       ],
       [
-        "Camina",
-        "She walks to the supermarket."
+        "leche",
+        "milk"
       ],
       [
-        "Encuentra",
-        "She finds everything she needs."
+        "huevos",
+        "eggs"
       ],
       [
-        "regresa",
-        "She pays and returns home."
+        "supermercado",
+        "supermarket"
       ]
     ],
     "questions": [
@@ -1189,24 +1189,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Daniel",
-        "Daniel receives a call."
+        "llamada",
+        "call"
       ],
       [
         "madre",
-        "It is his mother."
+        "mother"
       ],
       [
         "pregunta",
-        "She asks: Where are you?"
+        "asks"
       ],
       [
-        "Daniel",
-        "Daniel says: I am at home."
+        "casa",
+        "home"
       ],
       [
-        "Hablan",
-        "They talk for ten minutes."
+        "minutos",
+        "minutes"
       ]
     ],
     "questions": [
@@ -1266,24 +1266,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "camina",
-        "Eva walks in the mountains."
+        "montaña",
+        "mountain"
       ],
       [
-        "Lleva",
-        "She wears comfortable shoes and carries water."
+        "zapatos",
+        "shoes"
       ],
       [
         "camino",
-        "The path is long but beautiful."
+        "path"
       ],
       [
-        "muchos",
-        "She sees many green trees."
+        "árboles",
+        "trees"
       ],
       [
-        "Descansa",
-        "She rests beside a river."
+        "río",
+        "river"
       ]
     ],
     "questions": [
@@ -1343,24 +1343,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "invita",
-        "Raúl invites his friend to the cinema."
+        "cine",
+        "cinema"
       ],
       [
-        "Compran",
-        "They buy two tickets."
-      ],
-      [
-        "película",
-        "The movie begins at seven."
-      ],
-      [
-        "Comen",
-        "They eat popcorn."
+        "boletos",
+        "tickets"
       ],
       [
         "película",
-        "The movie is very fun."
+        "movie"
+      ],
+      [
+        "palomitas",
+        "popcorn"
+      ],
+      [
+        "divertida",
+        "fun"
       ]
     ],
     "questions": [
@@ -1420,24 +1420,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "familia",
-        "Inés's family visits the market."
+        "mercado",
+        "market"
       ],
       [
-        "Compran",
-        "They buy strawberries and bananas."
+        "fresas",
+        "strawberries"
       ],
       [
-        "hermano",
-        "Her brother wants a watermelon."
+        "plátanos",
+        "bananas"
       ],
       [
-        "padre",
-        "Her father carries the bags."
+        "sandía",
+        "watermelon"
       ],
       [
-        "Todos",
-        "Everyone prepares a fruit salad."
+        "fruta",
+        "fruit"
       ]
     ],
     "questions": [
@@ -1497,24 +1497,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Carmen",
-        "Carmen arrives at a hotel."
+        "hotel",
+        "hotel"
       ],
       [
-        "Habla",
-        "She talks with the receptionist."
-      ],
-      [
-        "Necesita",
-        "She needs a room for two nights."
+        "recepcionista",
+        "receptionist"
       ],
       [
         "habitación",
-        "The room has a big bed."
+        "room"
       ],
       [
-        "Carmen",
-        "Carmen leaves her suitcase and rests."
+        "cama",
+        "bed"
+      ],
+      [
+        "maleta",
+        "suitcase"
       ]
     ],
     "questions": [
@@ -1575,23 +1575,23 @@ export const extraLessons=[
     "vocab": [
       [
         "niños",
-        "Two children play in the park."
+        "children"
       ],
       [
-        "lleva",
-        "A girl carries a red ball."
+        "parque",
+        "park"
       ],
       [
-        "hermano",
-        "Her brother runs very fast."
+        "pelota",
+        "ball"
       ],
       [
-        "Después",
-        "Afterward they sit under a tree."
+        "árbol",
+        "tree"
       ],
       [
-        "madre",
-        "Their mother gives them water."
+        "agua",
+        "water"
       ]
     ],
     "questions": [
@@ -1651,24 +1651,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Diego",
-        "Diego looks for running shoes."
+        "correr",
+        "run"
       ],
       [
-        "Entra",
-        "He enters a shoe store."
+        "zapatería",
+        "shoe store"
       ],
       [
-        "Prueba",
-        "He tries on black shoes."
+        "zapatos",
+        "shoes"
       ],
       [
         "cómodos",
-        "They are comfortable but expensive."
+        "comfortable"
       ],
       [
-        "Decide",
-        "He decides to buy blue ones."
+        "caros",
+        "expensive"
       ]
     ],
     "questions": [
@@ -1728,24 +1728,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "abuela",
-        "Grandmother prepares soup."
+        "sopa",
+        "soup"
       ],
       [
-        "Corta",
-        "She cuts tomatoes and carrots."
+        "tomates",
+        "tomatoes"
       ],
       [
-        "Pone",
-        "She puts water in a pot."
+        "zanahorias",
+        "carrots"
+      ],
+      [
+        "olla",
+        "pot"
       ],
       [
         "caliente",
-        "The soup is hot."
-      ],
-      [
-        "familia",
-        "The whole family eats together."
+        "hot"
       ]
     ],
     "questions": [
@@ -1805,24 +1805,24 @@ export const extraLessons=[
     ],
     "vocab": [
       [
-        "Sofía",
-        "Sofía has a new neighbor."
+        "vecino",
+        "neighbor"
       ],
       [
-        "llama",
-        "His name is Miguel and he lives next door."
+        "nuevo",
+        "new"
       ],
       [
-        "Miguel",
-        "Miguel needs help with a box."
+        "caja",
+        "box"
       ],
       [
-        "Sofía",
-        "Sofía gladly helps him."
+        "ayuda",
+        "helps"
       ],
       [
-        "Después",
-        "Afterward they drink coffee together."
+        "juntos",
+        "together"
       ]
     ],
     "questions": [
