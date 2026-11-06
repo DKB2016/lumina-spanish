@@ -1,0 +1,75 @@
+# Lumina A1 delivery roadmap and burndown
+
+**Baseline:** 2026-11-04. **Scope:** 18 GitHub issues, **181 estimated story points**. All issues initially open. Estimates are planning approximations, not commitments. PR #3 remains draft and is **not** considered done.
+
+## Burndown baseline
+
+```mermaid
+xychart-beta
+  title "A1 roadmap: remaining story points"
+  x-axis ["Nov 4", "Nov 5"]
+  y-axis "Remaining points" 0 --> 181
+  line [181, 178]
+```
+
+**2026-11-05 snapshot:** Issue #4 completed after successful GitHub Actions validation (npm test, production build, headless Chromium smoke test) and user-confirmed Piper audio, microphone playback and mobile-layout checks. **178 points remain across 17 open issues** (3 of 181 points completed). PR #3 remains draft, so this is an explicitly documented exception to the merge-first release rule: issue #4 is validated on the feature branch but not yet integrated into main. Do not describe main as released or verified.
+
+## Live backlog
+
+[All open A1 roadmap issues](https://github.com/DKB2016/lumina-spanish/issues?q=is%3Aissue+is%3Aopen) · [All completed issues](https://github.com/DKB2016/lumina-spanish/issues?q=is%3Aissue+is%3Aclosed) · [Curriculum PR #3](https://github.com/DKB2016/lumina-spanish/pull/3)
+
+| Priority | Issue | Deliverable | Points |
+| --- | --- | --- | ---: |
+| Done | [#4](https://github.com/DKB2016/lumina-spanish/issues/4) | Build and regression verification (validated on feature branch) | 3 |
+| P0 | #5 | Objective grading and mastery gates | 5 |
+| P0 | #6 | Adaptive missed-skill remediation | 8 |
+| P1 | #7 | A1 CEFR-informed outcomes map | 8 |
+| P1 | #8 | Eight authentic, complete A1 units | 13 |
+| P1 | #9 | Unseen listening bank | 8 |
+| P1 | #10 | Speech recording and ASR pipeline | 13 |
+| P1 | #11 | Speaking rubric, calibrated feedback | 21 |
+| P1 | #12 | Writing rubric, calibrated feedback | 13 |
+| P1 | #13 | Four-skill A1 practice exams | 21 |
+| P1 | #14 | Skill mastery analytics | 8 |
+| P2 | #15 | Privacy, accessibility, offline assessment | 8 |
+| P2 | #16 | Curriculum schema and CI validation | 5 |
+| P2 | #17 | Pilot testing and release gates | 8 |
+| P1 | #18 | Unit grades, skill breakdowns and retake recommendations | 5 |
+| P1 | #19 | Four original 15–20-minute A1 audio stories/podcasts | 13 |
+| P1 | #20 | Multi-voice playback, transcript synchronization, offline cache | 13 |
+| P1 | #21 | Podcast comprehension, vocabulary and skill analytics | 8 |
+| | | **Baseline total** | **181** |
+| | | **Completed** | **3** |
+| | | **Remaining** | **178** |
+
+## Unit-level grading design
+
+Unit score is computed from first-attempt objective results in graded lessons only. Unattempted lessons do not count as zero, and the UI displays coverage separately. Each unit displays lesson scores, listening/reading/sentence-building/usage skill breakdowns and weakest lessons to retake. The overall A1 grade is now weighted by graded objective item counts (with a legacy-grade fallback), consistent with unit totals. Retakes retain attempt history and best/latest grades, and unit/course summaries use the best attempt. The learner sees latest and best separately. Historical progress without attempt history is accepted and migrated when retaken. Writing and speaking remain ungraded. See [issue #18](https://github.com/DKB2016/lumina-spanish/issues/18).
+
+## Issue #5 implementation and verification
+
+The assessment engine in `src/assessment.js` keeps first-attempt answers immutable during corrected retries, requires every objective item to be answered before a numeric grade is produced, applies the inclusive 80% pass mark, and preserves retake history. Automated coverage is in `tests/assessment.test.mjs` and the GitHub Actions build/browser workflow. **Issue #5 is not yet closed and its 5 points are not burned until the new workflow succeeds and acceptance is verified.** Passing objective practice is not equivalent to certified CEFR mastery; future mastery progression remains separate.
+
+## Stories and podcasts workstream
+
+Issues [#19](https://github.com/DKB2016/lumina-spanish/issues/19), [#20](https://github.com/DKB2016/lumina-spanish/issues/20), and [#21](https://github.com/DKB2016/lumina-spanish/issues/21) add long-form original comprehensible-input audio. Begin with four 15–20-minute A1 episodes. Scripts must be paced, scaffolded, and timed from actual rendered audio. Include optional synchronized transcripts, translations, sentence replay, offline cache, listening comprehension, vocabulary integration and skill analytics. Listening duration alone does not imply mastery. Multi-voice delivery requires suitable available voices or explicit narrated format.
+
+## Speaking assessment architecture
+
+1. Record short responses with microphone permission, clear privacy disclosure and playback.
+2. Generate a Spanish transcript using an ASR engine tuned/tested on Mexican Spanish; include timestamps and uncertainty. Provide a correction interface, but distinguish edited text from original spoken evidence.
+3. Score **communicative task completion, intelligibility, grammatical control, vocabulary appropriateness, fluency and interaction** against an explicit level-specific rubric. Acoustic pronunciation/fluency claims must use actual audio, not just the transcript.
+4. Provide evidence-based feedback and targeted practice. Flag low-confidence evaluations for human review or abstain instead of inventing precision.
+5. Benchmark against multiple human raters and diverse accents, speech rates, microphone conditions and learner backgrounds. Measure agreement, calibration and error rates before using scores for level decisions.
+
+## Writing assessment architecture
+
+1. Store prompt, learner draft, submitted version and revision history.
+2. Score **task fulfillment, comprehensibility, vocabulary, grammar and coherence** against a published A1 rubric.
+3. Provide targeted examples, explanations and suggested revisions, without silently replacing the learner's work.
+4. Use independently human-scored responses as a calibration set; measure rubric agreement, consistency and bias.
+5. Separate **formative coaching** from **high-stakes level assessment**. A generative model's unverified opinion is not an official CEFR certificate.
+
+## Release rule
+
+Issue closure normally requires acceptance criteria and test evidence, a merged PR, and documentation updates. **Exception for #4 (2026-11-05):** validated CI and user-confirmed manual acceptance were sufficient to close the verification issue on the feature branch; merging draft PR #3 remains an outstanding integration step. Re-estimate or split oversized issues as necessary, recording scope changes explicitly. Never treat all four language skills as graded when only multiple-choice tasks are measured.
