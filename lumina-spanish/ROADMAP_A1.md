@@ -44,7 +44,11 @@ xychart-beta
 
 ## Unit-level grading design
 
-Unit score is computed from first-attempt objective results in graded lessons only. Unattempted lessons do not count as zero, and the UI displays coverage separately. Each unit displays lesson scores, listening/reading/sentence-building/usage skill breakdowns and weakest lessons to retake. The overall A1 grade is currently the average of graded lesson scores; future work will reconcile weighting and track best/latest attempts. Writing and speaking are excluded until validated grading exists. See [issue #18](https://github.com/DKB2016/lumina-spanish/issues/18).
+Unit score is computed from first-attempt objective results in graded lessons only. Unattempted lessons do not count as zero, and the UI displays coverage separately. Each unit displays lesson scores, listening/reading/sentence-building/usage skill breakdowns and weakest lessons to retake. The overall A1 grade is now weighted by graded objective item counts (with a legacy-grade fallback), consistent with unit totals. Retakes retain attempt history and best/latest grades, and unit/course summaries use the best attempt. The learner sees latest and best separately. Historical progress without attempt history is accepted and migrated when retaken. Writing and speaking remain ungraded. See [issue #18](https://github.com/DKB2016/lumina-spanish/issues/18).
+
+## Issue #5 implementation and verification
+
+The assessment engine in `src/assessment.js` keeps first-attempt answers immutable during corrected retries, requires every objective item to be answered before a numeric grade is produced, applies the inclusive 80% pass mark, and preserves retake history. Automated coverage is in `tests/assessment.test.mjs` and the GitHub Actions build/browser workflow. **Issue #5 is not yet closed and its 5 points are not burned until the new workflow succeeds and acceptance is verified.** Passing objective practice is not equivalent to certified CEFR mastery; future mastery progression remains separate.
 
 ## Stories and podcasts workstream
 
