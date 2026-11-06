@@ -61,13 +61,13 @@ class Handler(BaseHTTPRequestHandler):
                     if slow:
                         command.extend(["--length_scale", "1.28"])
                     try:
-                        subprocess.run(command, input=text + "\n", text=True, capture_output=True, timeout=90, check=True)
+                        subprocess.run(command, input=(text + "\n").encode("utf-8"), capture_output=True, timeout=90, check=True)
                         if not temp.is_file() or temp.stat().st_size < 44:
                             raise RuntimeError("Piper did not produce a WAV file")
                         temp.replace(target)
                     except (OSError, subprocess.SubprocessError, RuntimeError) as exc:
                         temp.unlink(missing_ok=True)
-                        return self.send_json(503, {"error": "Local Piper synthesis failed. Check the Piper executable and voice model.", "detail": str(exc)[:300]})
+                        return self.send_json(503, {"error": "Local Piper synthesis failed. Check the Piper executable and voice model.", "detail": (str(exc) + (': ' + (exc.stderr or b'').decode('utf-8', errors='replace')[-250:] if isinstance(exc, subprocess.CalledProcessError) else ''))[:500]})
             payload = target.read_bytes()
             self.send_response(200)
             self.send_header("Content-Type", "audio/wav")
