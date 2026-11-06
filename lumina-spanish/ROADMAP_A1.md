@@ -7,12 +7,12 @@
 ```mermaid
 xychart-beta
   title "A1 roadmap: remaining story points"
-  x-axis ["Baseline", "Current"]
+  x-axis ["Nov 4", "Nov 5"]
   y-axis "Remaining points" 0 --> 181
-  line [181, 181]
+  line [181, 178]
 ```
 
-This chart records the *actual initial baseline only*. We will append a dated snapshot after each validated issue closure. We must not invent future velocity or mark a task done simply because code was pushed.
+**2026-11-05 snapshot:** Issue #4 completed after successful GitHub Actions validation (npm test, production build, headless Chromium smoke test) and user-confirmed Piper audio, microphone playback and mobile-layout checks. **178 points remain across 17 open issues** (3 of 181 points completed). PR #3 remains draft, so this is an explicitly documented exception to the merge-first release rule: issue #4 is validated on the feature branch but not yet integrated into main. Do not describe main as released or verified.
 
 ## Live backlog
 
@@ -20,7 +20,7 @@ This chart records the *actual initial baseline only*. We will append a dated sn
 
 | Priority | Issue | Deliverable | Points |
 | --- | --- | --- | ---: |
-| P0 | #4 | Build and regression verification | 3 |
+| Done | [#4](https://github.com/DKB2016/lumina-spanish/issues/4) | Build and regression verification (validated on feature branch) | 3 |
 | P0 | #5 | Objective grading and mastery gates | 5 |
 | P0 | #6 | Adaptive missed-skill remediation | 8 |
 | P1 | #7 | A1 CEFR-informed outcomes map | 8 |
@@ -38,7 +38,9 @@ This chart records the *actual initial baseline only*. We will append a dated sn
 | P1 | #19 | Four original 15–20-minute A1 audio stories/podcasts | 13 |
 | P1 | #20 | Multi-voice playback, transcript synchronization, offline cache | 13 |
 | P1 | #21 | Podcast comprehension, vocabulary and skill analytics | 8 |
-| | | **Total** | **181** |
+| | | **Baseline total** | **181** |
+| | | **Completed** | **3** |
+| | | **Remaining** | **178** |
 
 ## Unit-level grading design
 
@@ -66,4 +68,4 @@ Issues [#19](https://github.com/DKB2016/lumina-spanish/issues/19), [#20](https:/
 
 ## Release rule
 
-Issue closure requires acceptance criteria and test evidence, a merged PR, and documentation updates. Re-estimate or split oversized issues as necessary, recording scope changes explicitly. Never treat all four language skills as graded when only multiple-choice tasks are measured.
+Issue closure normally requires acceptance criteria and test evidence, a merged PR, and documentation updates. **Exception for #4 (2026-11-05):** validated CI and user-confirmed manual acceptance were sufficient to close the verification issue on the feature branch; merging draft PR #3 remains an outstanding integration step. Re-estimate or split oversized issues as necessary, recording scope changes explicitly. Never treat all four language skills as graded when only multiple-choice tasks are measured.
